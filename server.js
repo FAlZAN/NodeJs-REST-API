@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 app.use(CORS({origin: "*"}));
 
 const URI =
-  "mongodb+srv://raj:Temp_123@cluster0.3y2q9.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+  "mongodb+srv://<username>:<password>cluster0.3y2q9.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 MongoClient.connect(URI, {useUnifiedTopology: true}).then((client) => {
   console.log("Connect to MongoDB Successfully..");
   const DB = client.db("CRUD-BUILD");
